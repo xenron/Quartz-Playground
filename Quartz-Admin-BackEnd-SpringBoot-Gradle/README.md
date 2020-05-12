@@ -1,53 +1,32 @@
-# quartz-vue-admin
+# Prepear
 
-- It is an application that monitors the scheduler developed by Quartz Scheduler Library
-- It is available by registering SimpleTrigger to QuartzJob.
+**DataBase**
 
-## Prerequisites
-- npm >=5.6.0
-- node >= 8.11.3
-- jdk 1.8
+setting datasource connection for MySQL.
 
-## Project Build
+default is localhost:3306
+
+**Schema**
+
+Confirm Quartz table is exists.
+If not exists, need run script (quartz_innodb.sql & job_entity.sql) for create schema.
+
+**Data**
+
+Import initial data.
+
+run script (job_entity.sql) to insert initial data.
+
+# Compile
+
 ```
-./gradlew bootJar
-```
-
-## Project Setup
-
-- frontend root : src/main/frontend
-```
-npm install
-```
-
-#### Compiles and hot-reloads for development
-```
-npm run serve
+gradle bootJar
 ```
 
-#### Compiles and minifies for production
-```
-npm run build
-```
+# Run
 
-#### Run your tests
 ```
-npm run test
+gradle bootRun
 ```
 
-#### Java Spring Boot Application run
 
-- profile local
-  - h2 database (sample data)
-- profile prod
-  - enter your database info
-
-## preview
-
-- preview
-
-![](preview.gif)
-
-- add-simple-trigger
-
-![](add-simple-trigger.gif)
